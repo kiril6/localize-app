@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
-import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module';
 import { LocalizeRouterModule, LocalizeParser } from 'localize-router';
 import { UsersModule } from './users/users.module';
 import { Location } from '@angular/common';
@@ -47,8 +47,8 @@ export function localizeLoaderFactory(translate: TranslateService, location: Loc
 }
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'home' }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
@@ -69,7 +69,7 @@ const routes: Routes = [
       useFactory: localizeLoaderFactory,
       deps: [TranslateService]
     }),
-    HomeModule,
+    LoginModule,
     UsersModule
   ],
   exports: [RouterModule],

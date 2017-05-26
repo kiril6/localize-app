@@ -1,11 +1,7 @@
 {
-  "APP_TITLE": "Some app text",
-  "HOME": "Home >",
-  "USERS": "Users >",
-  "PROFILE": "Profile >",
+  "APP_TITLE": "This is the login page",
+  "LOGIN": "Login >",
   "BACK": "< Back",
-
-  "ROUTES.users": "users",
-  "ROUTES.profile": "profile",
-  "ROUTES.home": "home"
+  "pageTitle":"On this page will be visible the login form",
+  "ROUTES.login": "login"
 }

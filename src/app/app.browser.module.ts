@@ -6,7 +6,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module';
 import { LocalizeRouterModule } from 'localize-router';
 
 export function createTranslateLoader(http: Http) {
@@ -14,9 +14,9 @@ export function createTranslateLoader(http: Http) {
 }
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'users', loadChildren: './users/users.module#UsersModule' },
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
@@ -34,7 +34,7 @@ const routes: Routes = [
     }),
     RouterModule.forRoot(routes),
     LocalizeRouterModule.forRoot(routes),
-    HomeModule
+    LoginModule
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]

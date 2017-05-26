@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home.component';
+import { LoginComponent } from './login.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { LocalizeRouterModule } from 'localize-router';
 
 let routes = [
-  { path: 'home', component: HomeComponent }
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
@@ -14,6 +14,6 @@ let routes = [
     LocalizeRouterModule.forChild(routes),
     RouterModule.forChild(routes)
   ],
-  declarations: [HomeComponent]
+  declarations: [LoginComponent]
 })
-export class HomeModule { }
+export class LoginModule { }
