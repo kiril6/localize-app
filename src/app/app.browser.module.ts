@@ -15,7 +15,6 @@ export function createTranslateLoader(http: Http) {
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'users', loadChildren: './users/users.module#UsersModule' },
   { path: '**', redirectTo: 'login' }
 ];
 

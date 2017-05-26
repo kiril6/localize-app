@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { LoginModule } from './login/login.module';
 import { LocalizeRouterModule, LocalizeParser } from 'localize-router';
-import { UsersModule } from './users/users.module';
+
 import { Location } from '@angular/common';
 
 let fs = require('fs');
@@ -69,8 +69,7 @@ const routes: Routes = [
       useFactory: localizeLoaderFactory,
       deps: [TranslateService]
     }),
-    LoginModule,
-    UsersModule
+    LoginModule
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]
